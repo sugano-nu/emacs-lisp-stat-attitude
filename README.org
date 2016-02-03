@@ -1,0 +1,4 @@
+* README
+- Emacs Lisp Stat
+- http://sugano-nu.github.io/emacs-lisp-stat-attitude/
+
