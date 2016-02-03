@@ -1,0 +1,648 @@
+/*
+ * Org-mode の HTML 出力用スタイルシート
+ * 2015-12-10 sugano-styles-dark-2015-12-10.css をコピー
+ * 2015-12-10 @media print に org-html-print4.css をコピー
+ * Originally written by MORIMOTO Ken <ken.m.pp1@gmail.com>
+ *   <http://www.geocities.jp/km_pp1/org-mode/org-mode-document.html>
+ * Modified by Masahiro Takagi <mtkg@mac.com>
+ * Modified by SUGANO Tsuyoshi <sugano@chs.nihon-u.ac.jp>
+ */
+@charset "utf-8";
+html {}
+body {
+    font-family: "ヒラギノ明朝 Pro W3","Hiragino Mincho Pro","ＭＳ Ｐ明朝","MS PMincho",serif;
+    color: white;
+    background-color: black;
+    line-height: 150%;
+    margin: 2.0%
+}
+
+/*** リンク ***/
+a {
+    color: yellow;
+    text-decoration: none;
+    cursor: pointer;
+}
+a:link {}
+a:visited {
+    color: #FF99CC;
+}
+a:active, a:hover {
+    color: #000000;
+    background: #9999FF;
+}
+
+/*** タイトル ***/
+h1.title {
+    /* font-weight: bold; */
+    font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+    font-size: 187.2%;
+    line-height: 100%;
+    text-align: left;
+    color: #66CCFF; /*蛍光水色*/
+    border: 3px solid #99FFFF; /*蛍光ブルー*/
+    padding: 0.5em;
+    margin: 1.0em 0.0em;
+    border-radius: 0.2em;
+}
+
+/*** 目次 ***/
+div#table-of-contents {
+    /* display: none; */
+    margin: 2em;
+    font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+}
+div#text-table-of-contents {
+    /*background-color: #f0f0f0;*/
+    /*background-color: #003333;*/
+    background-color: black;
+    padding: 1.0em 1.0em;
+    border: 2px dotted #99FFFF; /* 蛍光ブルー */
+    border-radius: 2em;
+}
+div#text-table-of-contents ul {
+    list-style-type: none;
+    padding-left: 0em;
+    margin: 0em;
+}
+div#text-table-of-contents ul ul {
+    padding-left: 2em;
+}
+
+/*** 見出し ***/
+h2, h3, h4, h5, h6 {
+    /* font-weight: bold; */
+    font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+    line-height: 100%;
+    padding: 0.3em 0.3em;
+}
+h2 { font-size: 144.0%;
+     /*color: #FFCC00;*/ /*蛍光オレンジ*/
+     /*color: #0099FF;*/ /*蛍光水色*/
+     /*color: #6699FF;*/ /*蛍光水色*/
+     color: #66CCFF;
+   }
+h3 { font-size: 120.0%;
+     /*color: #FFCC00;*/ /*蛍光オレンジ*/
+     color: #CCCC00; /*蛍光鶯色*/
+   } /* 黄 */
+h4 { font-size: 104.6%;
+     color: #FFCC00; /*蛍光オレンジ*/
+   }
+h5 { font-size: 100.0%;
+     color: #FFCC00; /*蛍光オレンジ*/
+   }
+h6 { font-size: 100.0%;
+     color: #FFCC00; /*蛍光オレンジ*/
+   }
+h2 { border-bottom: 2px solid #FFCC00; } /*蛍光オレンジ*/
+h3 { border-bottom: 1px solid #FFCC00; } /*蛍光オレンジ*/
+h4 { border-bottom: 1px dotted #FFCC00; } /*蛍光オレンジ*/
+h5 { border-bottom: 1px dotted #FFCC00; } /*蛍光オレンジ*/
+h6 { border-bottom: 1px dotted #FFCC00; } /*蛍光オレンジ*/
+
+span.section-number-2 {
+    color: #99FFFF; /*蛍光ブルー*/
+    background-color: #000066; /* 紺 */
+    padding: 0.5em 0.2em;
+    border: 1px solid #99FFFF; /*蛍光ブルー*/
+    border-radius: 0.5em;
+}
+span.section-number-3,
+span.section-number-4,
+span.section-number-5,
+span.section-number-6 {
+    color: #99FFFF; /*蛍光ブルー*/
+    background-color: #000066; /* 紺 */
+    padding: 0.2em 0.2em;
+    border: 1px solid #99FFFF; /*蛍光ブルー*/
+    border-radius: 0.2em;
+}
+
+span.tag {
+    color: #000066; /* 紺 */
+}
+
+/*** 本文 ***/
+div.outline-2 { margin: 3.0em 0.0em; }
+div.outline-3 { margin: 1.8em 0.0em; }
+div.outline-4 { margin: 1.0em 0.0em; }
+div.outline-5 { margin: 1.0em 0.0em; }
+
+/*** 最初のセクション ***/
+div#outline-container-sec-1 { margin: 0.0em 0.0em; }
+div.outline-text-2,
+div.outline-text-3,
+div.outline-text-4 {
+    margin: 1.0em;
+}
+div.outline-text-5,
+div.outline-text-6 {
+    margin: 1.0em 1.5em;
+}
+p { margin: 0.7em 0.0em; }
+
+/*** 文字装飾 ***/
+/* 太字は色が変わらないが、変えてみる? */
+b { 
+    color: #FFCC00; /*蛍光オレンジ*/
+}
+i {}
+span.underline {
+    color: #8888CC;
+    text-decoration: underline;
+}
+code {
+    font-family: "Consolas", "Courier New", monospace;
+    font-family: "Menlo", "Consolas", "Ricty", "Osaka-Mono", "TakaoGothic", "ＭＳ ゴシック", monospace;
+    padding: 1px 4px;
+
+    color: #00FF66; /* green */
+    background-color: black;
+
+    border: 1px solid #d0d0d0;
+    -moz-border-radius-bottomleft: 4px;
+    -moz-border-radius-bottomright: 4px;
+    -moz-border-radius-topleft: 4px;
+    -moz-border-radius-topright: 4px;
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+}
+
+del {}
+
+/*** 画像 ***/
+a img {
+    border: none;
+}
+
+img.figure {                    /* 図としての画像 */
+    display: block;
+    margin: 1em auto;
+    border: 1px dotted #c00000;
+}
+
+/*** ソース、例文 ***/
+pre {
+    font-family: Osaka-mono, "Osaka-等幅", "ＭＳ ゴシック", monospace;
+    color: #00FF66; /* green */
+    background-color: #333300; /* 紺 */
+    border: 1px solid #a0a0a0;
+    /* font-size: 14px; */
+    font-size: 80%;
+    margin: 1.0em 1.0em;
+    padding: 0.25em 0.25em;
+    line-height: 1.1em;
+}
+pre.src {
+    font-family: Osaka-mono, "Osaka-等幅", "ＭＳ ゴシック", monospace;
+    /*color: #00FF66;*/ /* green */
+    background-color: #000033; /* 濃紺 */
+    border: 1px solid #a0a0a0;
+}
+pre.example {
+    font-family: Osaka-mono, "Osaka-等幅", "ＭＳ ゴシック", monospace;
+    color: #FFFFFF; /* 白 */
+    background-color: #000033; /* 濃紺 */
+    border: 1px solid #a0a0a0;
+}
+pre.src:before {
+    display: inline;
+    top: -10px;
+    right: 5px;
+    padding: 3px;
+    border: thin dotted white;
+    font-size: 80%;
+    color: white;
+    background-color: #000033; /* 濃紺 */
+}
+pre.src-term {
+    color: #7fff00;
+    background-color: #000066; /* 紺 */
+}
+pre.src-asymptote:before { content: 'asymptote'; }
+pre.src-C:before	{ content: 'C'; }
+pre.src-dot:before	{ content: 'dot'; }
+pre.src-calc:before	{ content: 'Emacs Calc'; }
+pre.src-emacs-lisp:before	{ content: 'Emacs Lisp'; }
+pre.src-gnuplot:before	{ content: 'gnuplot'; }
+pre.src-java:before	{ content: 'Java'; }
+pre.src-julia:before	{ content: 'Julia'; }
+pre.src-latex:before	{ content: 'LaTeX'; }
+pre.src-lisp:before	{ content: 'Lisp'; }
+pre.src-maxima:before	{ content: 'Maxima'; }
+pre.src-octave:before	{ content: 'Octave'; }
+pre.src-org:before	{ content: 'Org'; }
+pre.src-perl:before	{ content: 'Perl'; }
+pre.src-python:before	{ content: 'Python'; }
+pre.src-R:before	{ content: 'R'; }
+pre.src-ruby:before	{ content: 'Ruby'; }
+pre.src-scheme:before	{ content: 'Scheme'; }
+pre.src-sh:before	{ content: 'sh'; }
+pre.src-bash:before	{ content: 'sh'; }
+pre.src-sql:before	{ content: 'SQL'; }
+pre.src-stata:before	{ content: 'Stata'; }
+
+/*** テーブル ***/
+table { margin: auto; }
+thead {
+    color: white;
+    background-color: #006699;
+    font-size: 80.0%; /* 追加：表中の文字を縮小 */
+}
+tbody {
+    /*background-color: #f7f7f7;*/
+    background-color: black;
+    font-size: 80.0%; /* 追加：表中の文字を縮小 */
+}
+th, td {
+    padding: 0.0em 0.25em;
+    line-height: 1.5em;
+}
+th { font-weight: bold; }
+caption {
+    color: #FFCC00; /*蛍光オレンジ*/
+    font-weight: bold;
+    font-size: 100.0%;
+    white-space: nowrap;
+    margin: 1.0em 0em 0em 0em;
+}
+
+/*** リスト ***/
+ol, ul {
+    padding-left: 3em;
+    margin: 0.8em 0.0em;
+}
+ul ul, ul ol, ol ul, ol ol {
+    margin: 0.0em 0.0em;
+}
+li { padding: 0.1em 0.0em; }
+li p { margin: 0em 0em; }
+ol li {
+    /* レベル 1 の数付きリストには数字の横に線を付けてみる */
+    /* border-left: 1px solid #d0d0d0; */
+    padding-left: 0.5em;
+}
+ol li ol li{
+    /* レベル 2 以下の数付きリストには数字の横に線を付けない */
+    border: none;
+    padding-left: 0.5em;
+}
+ul li { border: none; }
+dl {
+    margin: 0.8em 0.0em;
+    margin-left: 1.0em;
+}
+dl dt {
+    font-weight: bold;
+    margin: 0.0em 1.0em 0.0em 0.5em;
+    float: left;
+    clear: left;
+}
+dl dd {  margin: 0.0em 0.0em 0.2em 8.5em; }
+dl dd:last-child {
+    margin-bottom: 0.0em;
+}
+
+/*** 水平線 ***/
+hr {
+    height: 2px;
+    background-color: #9999FF;
+    border-style: none;
+}
+/* -----------------------------------------------------------------
+   テキストエリア
+   CSS で readonly にすることはできないらしい。
+   org-html--textarea-block() の再定義が必要。
+----------------------------------------------------------------- */
+textarea {
+    overflow-x: auto;
+    overflow-y: auto;
+    font-family: "Menlo", "Consolas", "Ricty", "Osaka-Mono", "TakaoGothic", "ＭＳ ゴシック", monospace;
+    font-size: 100%;
+    line-height: 130%;
+    background-color: #f0f0f0;
+    border: 1px solid #a0a0a0;
+    margin: 0.5em 1.0em;
+    padding: 0.5em;
+}
+
+/*** フッタ ***/
+div#postamble {
+    /*color: #000000;*/
+    color: #FFFFFF; /* 白 */
+    text-align: right;
+    font-size: 93.0%;
+    line-height: 120%;
+    margin-top: 2em;
+    border-top: 5px solid #006699;
+    padding: 0.5em 0em;
+}
+div#postamble a {
+    /*color: #000000;*/
+    color: #FFFFFF; /* 白 */
+}
+div#postamble p {
+    margin: 0.3em 0em;
+    color: #FFFFFF; /* 白 */
+}
+p.creator {
+    color: #FFFFFF; /* 白 */
+}
+p.validation {
+    color: #FFFFFF; /* 白 */
+    display: none;
+}
+
+/* -------------------------------------------------------------------------------- */
+pre.ahk,pre.apl,pre.bash,pre.bash-output,pre.bbcode,pre.c,pre.common-lisp,pre.clojure,pre.cmd,pre.code,pre.cpp,pre.css,pre.elisp,pre.emacs-lisp,pre.erlang,pre.haskell,pre.html,pre.html6,pre.java,pre.js,pre.nodejs,pre.lsl,pre.latex,pre.math,pre.mathematica,pre.mysql,pre.ocaml,pre.output,pre.org-mode,pre.perl,pre.php,pre.povray,pre.powershell,pre.python,pre.python3,pre.qi,pre.ruby,pre.scala,pre.scheme,pre.slim,pre.unix-config,pre.vbs,pre.xml,pre.yaml {
+min-width:44%;
+white-space:pre-wrap;
+background-color:silver;
+border:solid thin gray;
+font-family:"DejaVu Sans Mono",monospace;
+padding:.5rem;
+margin:.5rem;
+}
+pre:before {content:"";
+position:relative;
+top:-1ex;
+right:0;
+float:right;
+color:gray;
+text-shadow: 0.2ex 0.2ex 0.2ex yellow;
+}
+pre.bash {background-color:hsl(22,24%,85%)}
+pre.bash:before {content:"bash"}
+pre.bash-output {background-color:hsl(204,81%,95%)}
+pre.emacs-lisp {background-color:hsl(120,100%,98%)}
+pre.emacs-lisp:before {content:"emacs lisp"}
+
+
+
+
+/*** 印刷用 ***/
+@media print {
+    html {}
+    body {
+        /* font-family: "Lucida Grande", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif; */
+        font-family: "ヒラギノ明朝 Pro W3","Hiragino Mincho Pro","ＭＳ Ｐ明朝","MS PMincho",serif;
+        /* font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif; */
+        font-size: 8.5pt;
+        color: black;
+        background-color: white;
+        line-height: 140%;
+        margin: 2.5% 2.0% 2.5% 3.0%
+    }
+
+    /*** リンク ***/
+    a {
+        /* color: #000000; */
+        color: blue;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    a:link {}
+    a:visited {}
+    a:active, a:hover {}
+
+    /*** タイトル ***/
+    h1.title {
+        /* font-weight: bold; */
+        font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+        color: #003366; /*群青*/
+        /* color: #0066D6;*/ /*青 #0066D6*/
+        /*青 #1C509B*/
+        /*青 #6FA6EC*/
+        font-size: 174.9%;
+        line-height: 100%;
+        text-align: left;
+        margin: 1.0em 0.0em;
+        /*border: 3px solid #99FFFF;*/ /*蛍光ブルー*/
+        /*border: 1px solid #0066D6;*/ /*青 #0066D6*/
+        border: 1px solid #003366; /*群青*/
+        padding: 0.5em;
+        border-radius: 0.2em;
+    }
+
+    /*** 目次 ***/
+    #table-of-contents, #text-table-of-contents {
+        /* display: none; */
+        margin: 2em;
+        font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+    }
+
+    div#text-table-of-contents {
+        /*background-color: #f0f0f0;*/
+        /*background-color: #003333;*/
+        background-color: white;
+        padding: 1.0em 1.0em;
+        border: 2px dotted #003366; /*群青*/
+        border-radius: 2em;
+    }
+
+    /*** 見出し ***/
+    h2, h3, h4, h5, h6 {
+        /* font-weight: bold; */
+        font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+        color: #003366; /*群青*/
+        /*color: #0066D6;*/ /*青 #0066D6*/
+        /*color: #FFCC00; */ /*蛍光オレンジ */
+        line-height: 100%;
+        padding: 0.5em 0.0em;
+    }
+    h2 { font-size: 132.2%; }
+    h3 { font-size: 115.0%; }
+    h4 { font-size: 115.0%; }
+    h5 { font-size: 115.0%; }
+    h6 { font-size: 115.0%; }
+
+    /* h2 { border-bottom: 0.1em #000000 solid; } */
+    h2 { border-bottom: 2px #FF9900 solid; } /*オレンジ*/
+    /* h2 { border-bottom: 1px #FFCC00 solid; } /\* #003366 蛍光オレンジ *\/ */
+    /* h2 { border-bottom: 1px #FF0000 solid; } /\*赤*\/ */
+    /* h2 { border-bottom: 1px #FFCC00 solid; } /\*蛍光オレンジ*\/ */
+    /* h2 { border-bottom: 1px #FFFF00 solid; } /\*黄色*\/ */
+    /* h2 { border-bottom: 0.2em #99FFFF solid; } */ /* #99FFFF 蛍光ブルー */
+
+    /* h3 { border-bottom: 0.1em #000000 dotted; } */
+    h3, h4, h5, h6 { border-bottom: 1px #FFCC00 solid; } /* #003366 蛍光オレンジ */
+    /* h3 { border-bottom: 0.2em #99FFFF solid; } */ /* #99FFFF 蛍光ブルー */
+
+    span.section-number-2,
+    span.section-number-3,
+    span.section-number-4,
+    span.section-number-5,
+    span.section-number-6 {
+        /* color: #000000; */
+        color: #003366; /* 群青 νガンダム*/
+        padding: 0.0em 0.5em 0.0em 0.0em;
+        /*border: 1px solid #003366;*/ /* 群青 νガンダム*/
+        border: 0px;
+        /*border-radius: 0.5em;*/
+    }
+
+    /*** 本文 ***/
+    div.outline-2 { margin: 2.0em 0.0em; }
+    div.outline-3 { margin: 1.0em 0.0em; }
+    div.outline-4 { margin: 1.0em 0.0em; }
+    div.outline-5 { margin: 1.0em 0.0em; }
+    div#outline-container-sec-1 { margin: 0.0em 0.0em; }
+    div.outline-text-2,
+    div.outline-text-3,
+    div.outline-text-4,
+    div.outline-text-5,
+    div.outline-text-6 {
+        margin: 0.0em 0.0em;
+    }
+    p { margin: 0.7em 0.0em; }
+
+/*** 文字装飾 ***/
+    b {color: #FF1F00; } /* 赤 */
+    i {}
+    span.underline {
+        color: #000000;
+        text-decoration: underline;
+    }
+    code {
+        font-family: "Consolas", "Ricty", "TakaoGothic", "Osaka-Mono", "ＭＳ ゴシック", monospace;
+        padding: 0.0em 0.3em;
+        color: teal;
+        background-color: white;
+        /* border: 1px solid #000000; */
+        border: 1px solid gray;
+        -moz-border-radius-bottomleft: 4px;
+        -moz-border-radius-bottomright: 4px;
+        -moz-border-radius-topleft: 4px;
+        -moz-border-radius-topright: 4px;
+        -webkit-border-top-left-radius: 4px;
+        -webkit-border-top-right-radius: 4px;
+        -webkit-border-bottom-right-radius: 4px;
+        -webkit-border-bottom-left-radius: 4px;
+    }
+
+    del {}
+
+/*** 画像 ***/
+    a img {
+        border: none;
+    }
+    img.figure {                    /* 図としての画像 */
+        display: block;
+        margin: 1em auto;
+        border: 1px dotted #c00000;
+    }
+/*** ソース、例文 ***/
+    pre {
+        font-family: Osaka-mono, "Osaka-等幅", "ＭＳ ゴシック", monospace;
+        font-size: 80%;
+        color: black;
+        padding: 0.25em 0.25em;
+        line-height: 1.1em;
+        border: 1px solid #a0a0a0;
+        /*font-size: 93.0%; */
+        /*line-height: 120%;*/
+        /*margin: 1.0em 1.5em;*/
+        /*padding: 0.3em;*/
+        /*margin: 1.0em 1.0em;*/
+        /*padding: 0.25em 0.5em;*/
+        /*border-radius: 0.2em;*/
+        /*border: 0.5px solid #000000;*/
+    }
+    pre.src {}
+    pre.example {}
+    pre.src-term {}
+    pre.src:before {
+        display: inline;
+        position: absolute;
+        top: -7px;
+        right: 10px;
+        padding: 2px;
+        border: 0px solid;
+        /*border: 1px solid #000000;*/
+        font-size: 80%;
+    }
+
+    /*** テーブル ***/
+    table { margin: auto; }
+    thead {
+        color: #003366; /*群青*/
+        /*    color: white;*/
+        /*    background-color: #006699;*/
+        font-size: 80.0%; /* 追加：表中の文字を縮小 */
+    }
+    tbody {
+        /*    background-color: #f0f0f0;*/
+        font-size: 80.0%; /* 追加：表中の文字を縮小 */
+    }
+    th, td {
+        padding: 0.0em 0.25em;
+        line-height: 1.5em;
+    }
+    th { font-weight: bold; }
+    caption {
+        color: #003366; /*群青*/
+        font-weight: bold;
+        font-size: smaller;
+        white-space: nowrap;
+        margin: 1.0em 0em 0em 0em;
+    }
+
+    /*** リスト ***/
+    ol, ul {
+        padding-left: 3em;
+        margin: 0.8em 0.0em;
+    }
+    ul ul, ul ol, ol ul, ol ol {
+        margin: 0.0em 0.0em;
+    }
+    li { padding: 0.1em 0.0em; }
+    li p { margin: 0em 0em; }
+    ol li {
+        /* レベル 1 の数付きリストには数字の横に線を付けてみる */
+        /* border-left: 1px solid #d0d0d0; */
+        padding-left: 0.5em;
+    }
+    ol li ol li{
+        /* レベル 2 以下の数付きリストには数字の横に線を付けない */
+        border: none;
+        padding-left: 0.5em;
+    }
+    ul li { border: none; }
+    dl { margin: 0.8em 0.0em; }
+    dl dt {
+        font-weight: bold;
+        margin: 0.0em 1.0em 0.0em 0.5em;
+        float: left;
+        clear: left;
+    }
+    dl dd { margin: 0.0em 0.0em 0.2em 8.5em; }
+    dl dd:last-child { margin-bottom: 0.0em; }
+
+/*** 水平線 ***/
+    hr {
+        height: 2px;
+        background-color: #9999FF;
+        border-style: none;
+    }
+/*** フッタ ***/
+    div#postamble {
+        color: #000000;
+        text-align: right;
+        font-size: 84.1%;
+        line-height: 118.9%;
+        margin-top: 2em;
+        border-top: 0.2em solid #000000;
+        padding: 0.5em 0em;
+    }
+    div#postamble a {
+        color: #000000;
+    }
+    div#postamble p {
+        margin: 0.3em 0em;
+    }
+    p.creator {}
+    p.validation { display: none; }
+}
